@@ -3,7 +3,6 @@ using FluentValidation;
 using LinkTekTest.Application.Mappers;
 using LinkTekTest.Application.Models;
 using LinkTekTest.Application.Queries;
-using LinkTekTest.Core.Entities;
 using LinkTekTest.Messages;
 using MediatR;
 using System.Collections.Generic;

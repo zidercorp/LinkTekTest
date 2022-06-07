@@ -11,7 +11,6 @@ namespace LinkTekTest.ViewModels
         public ShellViewModel(IContainer container)
         {
             _container = container;
-
         }
 
         public void RegisterFrame(Frame frame)
