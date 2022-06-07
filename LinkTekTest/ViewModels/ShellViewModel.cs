@@ -1,30 +1,29 @@
 ﻿using Caliburn.Micro;
-using LinkTekTest.Application.Queries;
-using MediatR;
-using System;
-using System.Threading;
-using System.Threading.Tasks;
+using StructureMap;
+using System.Windows.Controls;
 
 namespace LinkTekTest.ViewModels
 {
     public class ShellViewModel : Screen
     {
-        private readonly IMediator _mediator;
-        public ShellViewModel(IMediator mediator)
+        private INavigationService navigationService;
+        private readonly IContainer _container;
+        public ShellViewModel(IContainer container)
         {
-            _mediator = mediator;
+            _container = container;
+
         }
 
-        protected override async Task OnInitializeAsync(CancellationToken cancellationToken)
+        public void RegisterFrame(Frame frame)
         {
-            try
-            {
-                var test = await _mediator.Send(new GetAllCustomerQuery());
-            }
-            catch (Exception ex)
-            {
+            navigationService = new FrameAdapter(frame);
 
-            }
+            _container.Configure(c =>
+            {
+                c.For<INavigationService>().Add(navigationService);
+            });
+
+            navigationService.NavigateToViewModel(typeof(MainViewModel));
         }
     }
 }

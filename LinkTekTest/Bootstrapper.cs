@@ -1,5 +1,8 @@
 ﻿using Caliburn.Micro;
+using FluentValidation;
 using LinkTekTest.Application;
+using LinkTekTest.Application.Commands;
+using LinkTekTest.Application.Handlers.CommandHandlers;
 using LinkTekTest.Application.Handlers.QueryHandlers;
 using LinkTekTest.Application.Queries;
 using LinkTekTest.Core;
@@ -7,6 +10,7 @@ using LinkTekTest.Core.Entities;
 using LinkTekTest.Core.Repositories;
 using LinkTekTest.Infrastructure.Data;
 using LinkTekTest.Infrastructure.Repositories;
+using LinkTekTest.Validators;
 using LinkTekTest.ViewModels;
 using MediatR;
 using StructureMap;
@@ -59,14 +63,20 @@ namespace LinkTekTest
 
         private void GetStructureMapConfig(ConfigurationExpression cfg)
         {
+            cfg.ForConcreteType<ShellViewModel>();
             cfg.For<IWindowManager>().Use<WindowManager>().Singleton();
+            cfg.For<IEventAggregator>().Use<EventAggregator>().Singleton();
             cfg.For<LinkTekTestContext>().Use(new LinkTekTestContext());
             cfg.For<ICustomerRepository>().Use<CustomerRepository>().Singleton();
             cfg.For<IAsyncRequestHandler<GetAllCustomerQuery, List<Customer>>>().Use<GetAllCustomerHandler>().Singleton();
+            cfg.For<IAsyncRequestHandler<UpdateCustomerCommand, Customer>>().Use<UpdateCustomerHandler>().Singleton();
+
+            cfg.For<IValidator<CustomerEditViewModel>>().Use<CustomerEditViewModelValidator>().Singleton();
+
             cfg.Scan(s =>
             {
                 s.AssemblyContainingType<CoreRegistry>();
-                s.AssemblyContainingType<MediatRRegistry>();
+                s.AssemblyContainingType<ApplicationRegistry>();
                 s.LookForRegistries();
             });
         }

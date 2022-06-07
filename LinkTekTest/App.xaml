@@ -2,6 +2,7 @@
     x:Class="LinkTekTest.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converter="clr-namespace:LinkTekTest.Converters"
     xmlns:local="clr-namespace:LinkTekTest">
     <Application.Resources>
         <ResourceDictionary>
@@ -11,6 +12,11 @@
                     <SolidColorBrush x:Key="BackgroundBrush" Color="#FF225378" />
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
+
+            <converter:BooleanToObjectConverter
+                x:Key="boolToVisibilityConverter"
+                FalseValue="{x:Static Visibility.Collapsed}"
+                TrueValue="{x:Static Visibility.Visible}" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

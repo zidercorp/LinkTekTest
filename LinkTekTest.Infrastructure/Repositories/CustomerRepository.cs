@@ -13,16 +13,23 @@ namespace LinkTekTest.Infrastructure.Repositories
 
         }
 
-        public override async Task UpdateAsync(Customer customer)
+        public override async Task<Customer> UpdateAsync(Customer customer)
         {
             var existingCustomer = await _linkTekTestContext.Customers.FindAsync(customer.CustomerId);
 
             if (existingCustomer == null)
             {
-                return;
+                return null;
             }
 
+            customer.UpdatedTime = System.DateTime.UtcNow;
+            customer.CreatedTime = existingCustomer.CreatedTime;
+
             _linkTekTestContext.Entry(existingCustomer).CurrentValues.SetValues(customer);
+
+            _linkTekTestContext.SaveChanges();
+
+            return customer;
         }
     }
 }

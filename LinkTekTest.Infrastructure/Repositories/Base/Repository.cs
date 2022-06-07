@@ -39,7 +39,7 @@ namespace LinkTekTest.Infrastructure.Repositories.Base
             return await _linkTekTestContext.Set<T>().FindAsync(id);
         }
 
-        public virtual Task UpdateAsync(T entity)
+        public virtual Task<T> UpdateAsync(T entity)
         {
             throw new NotImplementedException();
         }

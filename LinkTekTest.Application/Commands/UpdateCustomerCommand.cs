@@ -1,13 +1,10 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using LinkTekTest.Core.Entities;
+using MediatR;
 
-namespace LinkTekTest.Core.Entities
+namespace LinkTekTest.Application.Commands
 {
-    public class Customer
+    public class UpdateCustomerCommand : IRequest<Customer>
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CustomerId { get; set; }
 
         public string FirstName { get; set; }
@@ -29,9 +26,5 @@ namespace LinkTekTest.Core.Entities
         public int Age { get; set; }
 
         public decimal Sales { get; set; }
-
-        public DateTime CreatedTime { get; set; }
-
-        public DateTime UpdatedTime { get; set; }
     }
 }
