@@ -13,7 +13,11 @@ namespace LinkTekTest.Validators
             RuleFor(x => x.City).NotNull().NotEmpty().MaximumLength(50);
             RuleFor(x => x.State).NotNull().NotEmpty().MaximumLength(2);
             RuleFor(x => x.Zip).NotNull().NotEmpty().MaximumLength(10);
-            RuleFor(x => x.Phone).NotNull().NotEmpty().MaximumLength(20);
+            RuleFor(x => x.Phone).NotNull().NotEmpty()
+            .MatchPhoneNumberRule()
+            .WithMessage("Please provide valid phone number");
+            RuleFor(a => a.Age).NotEmpty().NotNull().GreaterThan(0)
+            .WithMessage("Invalid age");
         }
     }
 }

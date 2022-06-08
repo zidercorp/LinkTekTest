@@ -11,6 +11,7 @@
                     <local:Bootstrapper x:Key="Bootstrapper" />
                     <SolidColorBrush x:Key="BackgroundBrush" Color="#FF225378" />
                 </ResourceDictionary>
+                <ResourceDictionary Source="Styles/Buttons.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <converter:BooleanToObjectConverter

@@ -1,0 +1,95 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="PrimaryPurple1">#3A2382</Color>
+    <SolidColorBrush x:Key="PrimaryPurple1Brush" Color="{StaticResource PrimaryPurple1}" />
+
+    <Color x:Key="PrimaryPurple2">#5335B0</Color>
+    <SolidColorBrush x:Key="PrimaryPurple2Brush" Color="{StaticResource PrimaryPurple2}" />
+
+    <Color x:Key="SecondaryPurple1">#6247B4</Color>
+    <SolidColorBrush x:Key="SecondaryPurple1Brush" Color="{StaticResource SecondaryPurple1}" />
+
+    <Color x:Key="SecondaryPurple2">#A698DD</Color>
+    <SolidColorBrush x:Key="SecondaryPurple2Brush" Color="{StaticResource SecondaryPurple2}" />
+
+    <Color x:Key="SecondaryPurple3">#DED9FF</Color>
+    <SolidColorBrush x:Key="SecondaryPurple3Brush" Color="{StaticResource SecondaryPurple3}" />
+
+    <Color x:Key="SecondaryPurple4">#E9E6FB</Color>
+    <SolidColorBrush x:Key="SecondaryPurple4Brush" Color="{StaticResource SecondaryPurple4}" />
+
+    <Color x:Key="SecondaryPurple5">#F2F2F7</Color>
+    <SolidColorBrush x:Key="SecondaryPurple5Brush" Color="{StaticResource SecondaryPurple5}" />
+
+    <Color x:Key="PrimaryDarkPurple1">#301C71</Color>
+    <SolidColorBrush x:Key="PrimaryDarkPurple1Brush" Color="{StaticResource PrimaryDarkPurple1}" />
+
+    <Color x:Key="NeutralBlack">#000000</Color>
+    <SolidColorBrush x:Key="NeutralBlackBrush" Color="{StaticResource NeutralBlack}" />
+
+    <Color x:Key="NeutralVeryDarkGray">#333333</Color>
+    <SolidColorBrush x:Key="NeutralVeryDarkGrayBrush" Color="{StaticResource NeutralVeryDarkGray}" />
+
+    <Color x:Key="NeutralDarkGray">#575757</Color>
+    <SolidColorBrush x:Key="NeutralDarkGrayBrush" Color="{StaticResource NeutralDarkGray}" />
+
+    <Color x:Key="NeutralGray">#949494</Color>
+    <SolidColorBrush x:Key="NeutralGrayBrush" Color="{StaticResource NeutralGray}" />
+
+    <Color x:Key="NeutralLightGray1">#D1D1D1</Color>
+    <SolidColorBrush x:Key="NeutralLightGray1Brush" Color="{StaticResource NeutralLightGray1}" />
+
+    <Color x:Key="NeutralLightGray2">#EDEDED</Color>
+    <SolidColorBrush x:Key="NeutralLightGray2Brush" Color="{StaticResource NeutralLightGray2}" />
+
+    <Color x:Key="NeutralLightGray3">#F3F3F3</Color>
+    <SolidColorBrush x:Key="NeutralLightGray3Brush" Color="{StaticResource NeutralLightGray3}" />
+
+    <Color x:Key="NeutralLightGray4">#FCFCFC</Color>
+    <SolidColorBrush x:Key="NeutralLightGray4Brush" Color="{StaticResource NeutralLightGray4}" />
+
+    <Color x:Key="NeutralLightGray5">#E5E5E5</Color>
+    <SolidColorBrush x:Key="NeutralLightGray5Brush" Color="{StaticResource NeutralLightGray5}" />
+
+    <Color x:Key="NeutralLightGray6">#9E9E9E</Color>
+    <SolidColorBrush x:Key="NeutralLightGray6Brush" Color="{StaticResource NeutralLightGray6}" />
+
+    <Color x:Key="NeutralLightGray7">#EAEAEA</Color>
+    <SolidColorBrush x:Key="NeutralLightGray7Brush" Color="{StaticResource NeutralLightGray7}" />
+
+    <Color x:Key="NeutralDividerGray">#E0E0E0</Color>
+    <SolidColorBrush x:Key="NeutralDividerGrayBrush" Color="{StaticResource NeutralDividerGray}" />
+
+    <Color x:Key="NeutralWhite">#FFFFFF</Color>
+    <SolidColorBrush x:Key="NeutralWhiteBrush" Color="{StaticResource NeutralWhite}" />
+
+    <Color x:Key="VeryDarkRed">#921844</Color>
+    <SolidColorBrush x:Key="VeryDarkRedBrush" Color="{StaticResource VeryDarkRed}" />
+
+    <Color x:Key="DarkRed">#B81237</Color>
+    <SolidColorBrush x:Key="DarkRedBrush" Color="{StaticResource DarkRed}" />
+
+    <Color x:Key="LightRed">#C72D65</Color>
+    <SolidColorBrush x:Key="LightRedBrush" Color="{StaticResource LightRed}" />
+
+    <Color x:Key="Red">#FF2222</Color>
+    <SolidColorBrush x:Key="RedBrush" Color="{StaticResource Red}" />
+
+    <Color x:Key="Orange">#FF6422</Color>
+    <SolidColorBrush x:Key="OrangeBrush" Color="{StaticResource Orange}" />
+
+    <Color x:Key="Success">#3FBC2D</Color>
+    <SolidColorBrush x:Key="SuccessBrush" Color="{StaticResource Success}" />
+
+    <Color x:Key="Lime">#20C997</Color>
+    <SolidColorBrush x:Key="LimeBrush" Color="{StaticResource Lime}" />
+
+    <Color x:Key="BackgroundColor">#F2F2F2</Color>
+    <SolidColorBrush x:Key="BackgroundColorBrush" Color="{StaticResource BackgroundColor}" />
+
+    <Color x:Key="LightGrayBorderColor">#EBEBEB</Color>
+    <SolidColorBrush x:Key="LightGrayBorderColorBrush" Color="{StaticResource LightGrayBorderColor}" />
+
+    <Color x:Key="IsBusyBackgroundColor">#90000000</Color>
+    <SolidColorBrush x:Key="IsBusyBackgroundColorBrush" Color="{StaticResource IsBusyBackgroundColor}" />
+
+</ResourceDictionary>

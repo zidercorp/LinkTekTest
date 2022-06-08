@@ -1,0 +1,352 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Alabama",
+    "Abbreviations": "AL",
+    "Capital": "Montgomery",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 2,
+    "Name": "Alaska",
+    "Abbreviations": "AK",
+    "Capital": "Juneau",
+    "UTCOffset": "-9"
+  },
+  {
+    "Id": 3,
+    "Name": "Arizona",
+    "Abbreviations": "AZ",
+    "Capital": "Phoenix",
+    "UTCOffset": "-7"
+  },
+  {
+    "Id": 4,
+    "Name": "Arkansas",
+    "Abbreviations": "AR",
+    "Capital": "Little Rock",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 5,
+    "Name": "California",
+    "Abbreviations": "CA",
+    "Capital": "Sacramento",
+    "UTCOffset": "-8"
+  },
+  {
+    "Id": 6,
+    "Name": "Colorado",
+    "Abbreviations": "CO",
+    "Capital": "Denver",
+    "UTCOffset": "-7"
+  },
+  {
+    "Id": 7,
+    "Name": "Connecticut",
+    "Abbreviations": "CT",
+    "Capital": "Hartford",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 8,
+    "Name": "Delaware",
+    "Abbreviations": "DE",
+    "Capital": "Dover",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 9,
+    "Name": "Florida",
+    "Abbreviations": "FL",
+    "Capital": "Tallahassee",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 10,
+    "Name": "Georgia",
+    "Abbreviations": "GA",
+    "Capital": "Atlanta",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 11,
+    "Name": "Hawaii",
+    "Abbreviations": "HI",
+    "Capital": "Honolulu",
+    "UTCOffset": "-10"
+  },
+  {
+    "Id": 12,
+    "Name": "Idaho",
+    "Abbreviations": "ID",
+    "Capital": "Boise",
+    "UTCOffset": "-7"
+  },
+  {
+    "Id": 13,
+    "Name": "Illinois",
+    "Abbreviations": "IL",
+    "Capital": "Springfield",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 14,
+    "Name": "Indiana",
+    "Abbreviations": "IN",
+    "Capital": "Indianapolis",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 15,
+    "Name": "Iowa",
+    "Abbreviations": "IA",
+    "Capital": "Des Moines",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 16,
+    "Name": "Kansas",
+    "Abbreviations": "KS",
+    "Capital": "Topeka",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 17,
+    "Name": "Kentucky",
+    "Abbreviations": "KY",
+    "Capital": "Frankfort",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 18,
+    "Name": "Louisiana",
+    "Abbreviations": "LA",
+    "Capital": "Baton Rouge",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 19,
+    "Name": "Maine",
+    "Abbreviations": "ME",
+    "Capital": "Augusta",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 20,
+    "Name": "Maryland",
+    "Abbreviations": "MD",
+    "Capital": "Annapolis",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 21,
+    "Name": "Massachusetts",
+    "Abbreviations": "MA",
+    "Capital": "Boston",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 22,
+    "Name": "Michigan",
+    "Abbreviations": "MI",
+    "Capital": "Lansing",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 23,
+    "Name": "Minnesota",
+    "Abbreviations": "MN",
+    "Capital": "Saint Paul",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 24,
+    "Name": "Mississippi",
+    "Abbreviations": "MS",
+    "Capital": "Jackson",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 25,
+    "Name": "Missouri",
+    "Abbreviations": "MO",
+    "Capital": "Jefferson City",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 26,
+    "Name": "Montana",
+    "Abbreviations": "MT",
+    "Capital": "Helena",
+    "UTCOffset": "-7"
+  },
+  {
+    "Id": 27,
+    "Name": "Nebraska",
+    "Abbreviations": "NE",
+    "Capital": "Lincoln",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 28,
+    "Name": "Nevada",
+    "Abbreviations": "NV",
+    "Capital": "Carson City",
+    "UTCOffset": "-8"
+  },
+  {
+    "Id": 29,
+    "Name": "New Hampshire",
+    "Abbreviations": "NH",
+    "Capital": "Concord",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 30,
+    "Name": "New Jersey",
+    "Abbreviations": "NJ",
+    "Capital": "Trenton",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 31,
+    "Name": "New Mexico",
+    "Abbreviations": "NM",
+    "Capital": "Santa Fe",
+    "UTCOffset": "-7"
+  },
+  {
+    "Id": 32,
+    "Name": "New York",
+    "Abbreviations": "NY",
+    "Capital": "Albany",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 33,
+    "Name": "North Carolina",
+    "Abbreviations": "NC",
+    "Capital": "Raleigh",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 34,
+    "Name": "North Dakota",
+    "Abbreviations": "ND",
+    "Capital": "Bismarck",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 35,
+    "Name": "Ohio",
+    "Abbreviations": "OH",
+    "Capital": "Columbus",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 36,
+    "Name": "Oklahoma",
+    "Abbreviations": "OK",
+    "Capital": "Oklahoma City",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 37,
+    "Name": "Oregon",
+    "Abbreviations": "OR",
+    "Capital": "Salem",
+    "UTCOffset": "-8"
+  },
+  {
+    "Id": 38,
+    "Name": "Pennsylvania",
+    "Abbreviations": "PA",
+    "Capital": "Harrisburg",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 39,
+    "Name": "Rhode Island",
+    "Abbreviations": "RI",
+    "Capital": "Providence",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 40,
+    "Name": "South Carolina",
+    "Abbreviations": "SC",
+    "Capital": "Columbia",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 41,
+    "Name": "South Dakota",
+    "Abbreviations": "SD",
+    "Capital": "Pierre",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 42,
+    "Name": "Tennessee",
+    "Abbreviations": "TN",
+    "Capital": "Nashville",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 43,
+    "Name": "Texas",
+    "Abbreviations": "TX",
+    "Capital": "Austin",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 44,
+    "Name": "Utah",
+    "Abbreviations": "UT",
+    "Capital": "Salt Lake City",
+    "UTCOffset": "-7"
+  },
+  {
+    "Id": 45,
+    "Name": "Vermont",
+    "Abbreviations": "VT",
+    "Capital": "Montpelier",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 46,
+    "Name": "Virginia",
+    "Abbreviations": "VA",
+    "Capital": "Richmond",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 47,
+    "Name": "Washington",
+    "Abbreviations": "WA",
+    "Capital": "Olympia",
+    "UTCOffset": "-8"
+  },
+  {
+    "Id": 48,
+    "Name": "West Virginia",
+    "Abbreviations": "WV",
+    "Capital": "Charleston",
+    "UTCOffset": "-5"
+  },
+  {
+    "Id": 49,
+    "Name": "Wisconsin",
+    "Abbreviations": "WI",
+    "Capital": "Madison",
+    "UTCOffset": "-6"
+  },
+  {
+    "Id": 50,
+    "Name": "Wyoming",
+    "Abbreviations": "WY",
+    "Capital": "Cheyenne",
+    "UTCOffset": "-7"
+  }
+]

@@ -5,7 +5,7 @@ using LinkTekTest.Application.Commands;
 using LinkTekTest.Application.Handlers.CommandHandlers;
 using LinkTekTest.Application.Handlers.QueryHandlers;
 using LinkTekTest.Application.Queries;
-using LinkTekTest.Core;
+using LinkTekTest.Application.Services;
 using LinkTekTest.Core.Entities;
 using LinkTekTest.Core.Repositories;
 using LinkTekTest.Infrastructure.Data;
@@ -64,18 +64,23 @@ namespace LinkTekTest
         private void GetStructureMapConfig(ConfigurationExpression cfg)
         {
             cfg.ForConcreteType<ShellViewModel>();
+            cfg.ForConcreteType<USStateService>();
             cfg.For<IWindowManager>().Use<WindowManager>().Singleton();
             cfg.For<IEventAggregator>().Use<EventAggregator>().Singleton();
+
+            // Data
             cfg.For<LinkTekTestContext>().Use(new LinkTekTestContext());
             cfg.For<ICustomerRepository>().Use<CustomerRepository>().Singleton();
+
+            // Commmands and Queries
             cfg.For<IAsyncRequestHandler<GetAllCustomerQuery, List<Customer>>>().Use<GetAllCustomerHandler>().Singleton();
             cfg.For<IAsyncRequestHandler<UpdateCustomerCommand, Customer>>().Use<UpdateCustomerHandler>().Singleton();
 
+            // Validators
             cfg.For<IValidator<CustomerEditViewModel>>().Use<CustomerEditViewModelValidator>().Singleton();
 
             cfg.Scan(s =>
             {
-                s.AssemblyContainingType<CoreRegistry>();
                 s.AssemblyContainingType<ApplicationRegistry>();
                 s.LookForRegistries();
             });

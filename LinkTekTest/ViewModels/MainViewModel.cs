@@ -3,6 +3,7 @@ using FluentValidation;
 using LinkTekTest.Application.Mappers;
 using LinkTekTest.Application.Models;
 using LinkTekTest.Application.Queries;
+using LinkTekTest.Application.Services;
 using LinkTekTest.Messages;
 using MediatR;
 using System.Collections.Generic;
@@ -18,15 +19,21 @@ namespace LinkTekTest.ViewModels
         private readonly IWindowManager _windowManager;
         private readonly IEventAggregator _eventAggregator;
         private readonly IValidator<CustomerEditViewModel> _validator;
+        private readonly USStateService _stateService;
 
         private bool _isBusy;
 
-        public MainViewModel(IMediator mediator, IWindowManager windowManager, IValidator<CustomerEditViewModel> validator, IEventAggregator eventAggregator)
+        public MainViewModel(IMediator mediator, 
+                             IWindowManager windowManager, 
+                             IValidator<CustomerEditViewModel> validator, 
+                             IEventAggregator eventAggregator,
+                             USStateService stateService)
         {
             _mediator = mediator;
             _windowManager = windowManager;
             _eventAggregator = eventAggregator;
             _validator = validator;
+            _stateService = stateService;
             _eventAggregator.SubscribeOnPublishedThread(this);
         }
 
@@ -45,7 +52,7 @@ namespace LinkTekTest.ViewModels
 
         public void RowSelect(CustomerModel customer)
         {
-            var dialogViewModel = new CustomerEditViewModel(_mediator, _eventAggregator, _validator, customer);
+            var dialogViewModel = new CustomerEditViewModel(_mediator, _eventAggregator, _validator, _stateService, customer);
             _windowManager.ShowDialogAsync(dialogViewModel);
         }
 

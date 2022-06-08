@@ -20,6 +20,7 @@
             x:Name="LoadAsync"
             Width="150"
             Margin="0,0,0,10"
+            Style="{StaticResource PrimaryButtonStyle}"
             HorizontalAlignment="Left"
             Content="Load" />
         <DataGrid

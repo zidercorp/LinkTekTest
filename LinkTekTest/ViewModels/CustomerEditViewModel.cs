@@ -2,9 +2,12 @@
 using FluentValidation;
 using LinkTekTest.Application.Commands;
 using LinkTekTest.Application.Models;
+using LinkTekTest.Application.Services;
 using LinkTekTest.Messages;
 using MediatR;
+using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 
 namespace LinkTekTest.ViewModels
@@ -14,6 +17,7 @@ namespace LinkTekTest.ViewModels
         private readonly IMediator _mediator;
         private readonly IEventAggregator _eventAggregator;
         private readonly IValidator<CustomerEditViewModel> _validator;
+        private readonly USStateService _stateService;
 
         private string _firstName;
         private string _lastName;
@@ -26,14 +30,33 @@ namespace LinkTekTest.ViewModels
         private int _age;
         private decimal _sales;
         private bool _isDirty = false;
+        private BindableCollection<StateModel> _states;
 
-        public CustomerEditViewModel(IMediator mediator, IEventAggregator eventAggregator, IValidator<CustomerEditViewModel> validator, CustomerModel customer)
+        public CustomerEditViewModel(IMediator mediator, 
+                                     IEventAggregator eventAggregator, 
+                                     IValidator<CustomerEditViewModel> validator, 
+                                     USStateService stateService,
+                                     CustomerModel customer)
         {
             _mediator = mediator;
             _eventAggregator = eventAggregator;
             _validator = validator;
+            _stateService = stateService;
 
             SetProperties(customer);
+            _isDirty = false;
+        }
+
+        protected override Task OnInitializeAsync(CancellationToken cancellationToken)
+        {
+            var states = _stateService.GetZipCodeModels();
+
+            if (states?.Any() == true)
+            {
+                States = new BindableCollection<StateModel>(states);
+            }
+
+            return base.OnInitializeAsync(cancellationToken);
         }
 
         private void SetProperties(CustomerModel customer)
@@ -49,6 +72,12 @@ namespace LinkTekTest.ViewModels
             Phone = customer.Phone;
             Age = customer.Age;
             Sales = customer.Sales;
+        }
+
+        public BindableCollection<StateModel> States
+        {
+            get => _states;
+            set => Set(ref _states, value);
         }
 
         public int CustomerId { get; set; }
@@ -220,13 +249,20 @@ namespace LinkTekTest.ViewModels
                     MessageBox.Show("Failed updating customer.", "An error as occurred", MessageBoxButton.OK);
                 }
 
+                MessageBox.Show("Update successful!", "Save", MessageBoxButton.OK);
+
                 await _eventAggregator.PublishOnUIThreadAsync(new UpdatedCustomerMessage(updatedCustomer), CancellationToken.None);
 
                 await TryCloseAsync();
             }
             else
             {
-                MessageBox.Show("Please complete customer details", "Validation Failed", MessageBoxButton.OK);
+                var message = "Please complete customer details";
+
+                if (result.Errors?.Any() == true)
+                    message = result.Errors.First().ErrorMessage;
+
+                MessageBox.Show(message, "Validation Failed", MessageBoxButton.OK);
             }
         }
 
